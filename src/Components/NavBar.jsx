@@ -290,7 +290,7 @@ export default function Navbar() {
                 itemText='History'
                 href='#/history'
               /> */}
-              {userRole === 'admin' ? (
+              {/*userRole === 'admin' ? (
                 <DrawerListItem
                   drawerOpen={(state) => setIsOpen(state)}
                   icon={<SettingsIcon />}
@@ -299,7 +299,7 @@ export default function Navbar() {
                 />
               ) : (
                 ''
-              )}
+              )*/}
             </List>
           </CustomDrawer>
         </Box>
