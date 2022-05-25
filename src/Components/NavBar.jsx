@@ -50,9 +50,9 @@ export default function Navbar() {
   useEffect(() => {
     if (claim != undefined) {
       claim.then((result) => {
-        // console.log(result['http://localhost:8000//roles'][0]);
+        console.log(result[`${window.location.origin}\/role`]);
         // setUserRole((prev) => result['http://localhost:8000//roles'][0]);
-        setUserRole((prev) => result[`${window.location.origin}\/role`][0]);
+        // setUserRole((prev) => result[`${window.location.origin}\/role`][0]);
       });
     }
   }, [claim]);
