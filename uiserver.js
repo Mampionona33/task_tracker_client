@@ -35,6 +35,14 @@ if (apiProxyTarget) {
   );
 }
 
+if (apiProxyTarget && process.env.NODE_ENV === 'production') {
+  console.log('apiProxyTarget production :', apiProxyTarget);
+  app.use(
+    '/graphql',
+    createProxyMiddleware({ target: apiProxyTarget, changeOrigin: true })
+  );
+}
+
 // sending endpoint env to process.env
 const UI_API_ENDPOINT =
   process.env.UI_API_ENDPOINT || 'http://localhost:3000/graphql';
