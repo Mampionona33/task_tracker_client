@@ -52,7 +52,7 @@ export default function Navbar() {
       claim.then((result) => {
         // console.log(result['http://localhost:8000//roles'][0]);
         // setUserRole((prev) => result['http://localhost:8000//roles'][0]);
-        setUserRole((prev) => result[`${window.location.origin}//role`][0]);
+        setUserRole((prev) => result[`${window.location.origin}\/\/role`][0]);
       });
     }
   }, [claim]);
