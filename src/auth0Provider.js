@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 const Auth0ProviderWithHistory = ({ children }) => {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-  const navigate = useNavigate();
-  // const onRedirectCallback = (appState) => {
-  //   return <useNavigate to={appState?.returnTo || window.location.pathname} />;
-  // };
+  // const navigate = useNavigate();
   const onRedirectCallback = (appState) => {
-    navigate.push(appState?.returnTo || window.location.pathname);
+    return <useNavigate to={appState?.returnTo || window.location.pathname} />;
   };
+  // const onRedirectCallback = (appState) => {
+  //   navigate.push(appState?.returnTo || window.location.pathname);
+  // };
 
   return (
     <Auth0Provider
