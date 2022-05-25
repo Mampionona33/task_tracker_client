@@ -16,7 +16,8 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.origin}
+      // redirectUri={window.location.origin}
+      redirectUri='https://mampi-task-tracker-client.herokuapp.com/'
       onRedirectCallback={onRedirectCallback}
       // useRefreshTokens={true}
       // cacheLocation='localstorage'
